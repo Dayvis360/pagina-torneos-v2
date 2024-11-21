@@ -21,7 +21,7 @@ darkModeButton.addEventListener("click", ()=>{
   }
 });
 
-const navigateSection = (event)=>{
+const noGuardarEnHistorial = (event)=>{
   let target = event.target.getAttribute('href');
   window.history.replaceState(null, null, window.location.href.split('#')[0] + target);
 }
