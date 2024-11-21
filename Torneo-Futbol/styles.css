@@ -1,0 +1,265 @@
+/* Esto es la paleta de colores, basicamente son variables pa cambiar los colores de muchas cosas en 1 linea, para usar las variables lo ven abajo pero es: var(nombre)*/
+:root {
+  --color-primario: #52050A; /*no se usa*/
+  --color-secundario: #A30000; /*header y footer*/
+  --color-terciario: #B0B3B3; /*sections*/
+  --color-cuaternario: #E0E0E0; /*fondo del body*/
+  --color-quintario: #AF9FA5; /*no se usa*/
+  --color-texto: #000; /*textos y svgs*/
+  --color-texto-contrario: #FFF; /*textos y svgs*/
+}
+
+/*Paleta de colores para el modo oscuro*/
+.dark-mode {
+  --color-primario: #52050A; /*no se usa*/
+  --color-secundario: #141414;
+  --color-terciario: #212529;
+  --color-cuaternario: #000;
+  --color-quintario: #AF9FA5; /*no se usa*/
+  --color-texto: #FFF;
+  --color-texto-contrario: #000;
+}
+
+
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto auto 1fr auto;
+  background-color: var(--color-cuaternario);
+  color: var(--color-texto);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave al poner modo oscuro*/
+}
+
+.banner {
+  width: 100%;
+  height: 15vh;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header {
+  background-color: var(--color-secundario);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100; /*el header se sobrepone al carousel*/
+  color: var(--color-texto);
+}
+
+.svg {
+  color: inherit; /*inherit es que hereda el valor del atributo de su padre, osea de su contenedor*/
+  cursor: pointer;
+  transition: .2s all linear;
+}
+
+.svg:hover {
+  color: var(--color-texto-contrario);
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 10px; /*espaciado entre los li*/
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header nav ul li {
+  display: inline;
+  border-bottom: 2px solid var(--color-texto);
+  transition: .2s all linear;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header nav ul li:hover {
+  color: var(--color-texto-contrario);
+  border-bottom: 2px solid var(--color-texto-contrario);
+}
+
+.dark-mode-button {
+  cursor: pointer;
+}
+
+#carouselExample {
+  width: 100%;
+  height: 250px;
+  margin-top: 0;
+}
+
+.carousel-inner {
+  height: 250px;
+}
+
+.carousel-inner div img {
+  height: 250px; /* Altura para pantallas pequeñas */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  gap: 5%;
+  padding: 20px;
+  margin-bottom: 50px;
+  scroll-margin-top: 50px; /*al hacer scroll mediante los links internos agrega un poco de espacio arriba, sin esto el contenido se tapa por el header fixeado*/
+}
+
+.section-title {
+  width: 100%;
+  color: var(--color-texto);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.section-item {
+  background-color: var(--color-terciario);
+  flex-grow: 1;
+  flex: 1;
+  min-width: 250px;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section-item-title {
+  width: 100%;
+  color: var(--color-texto);
+  padding: 10px 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+.section-item-img {
+  padding: 0;
+}
+
+.section-item-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: var(--color-secundario); /* Color de fondo del footer */
+  padding: 20px;
+  display: flex;
+  flex-direction: columns;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+}
+
+.footer p {
+  flex-basis: 300px;
+  flex-grow: 1;
+}
+
+.redes-sociales {
+  flex-basis: 300px;
+  flex-grow: 1;
+}
+
+.redes-sociales a {
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Media Query para pantallas más grandes */
+@media (min-width: 800px) {
+  main {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+  }
+ 
+  #carouselExample {
+    width: 80%;
+    height: 400px;
+  }
+
+  .carousel-inner {
+    height: 400px;
+  }
+
+  .carousel-inner div img {
+    height: 400px;
+  }
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 799px) {
+  .section {
+    flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+  }
+  .footer {
+    margin-top: 30px;
+  }
+}
+
+/* Media Query para que el banner se vea mejor*/
+@media (min-width: 1000px) {
+  .banner {
+    min-height: 25vh;
+  }
+}
+
+@media (max-width: 450px){
+  .body {
+    font-size:14px;
+  }
+  .header {
+    padding:5px 5px;
+  }
+  .header svg {
+    width:20px;
+    height:20px;
+   
+  }
+  .header nav ul {
+    gap:5px;
+  }
+  .header nav ul li {
+    font-size:10px;
+  }
+}
+
+@media (min-width:700px){
+  #clasificacion {
+    margin-bottom:100px;
+  }
+}
+
+@media (min-width: 580px) {
+  .footer {
+    margin-top: 80px;
+}
