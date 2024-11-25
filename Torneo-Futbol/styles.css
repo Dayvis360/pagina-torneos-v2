@@ -165,6 +165,27 @@
   object-fit: cover;
 }
 
+/* Tabla de puntos */
+.tabla-item {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  background: var(--color-cuaternario);
+}
+
+.tabla-item-campo {
+  border: 1px solid var(--color-texto);
+}
+
+.campo-nombre {
+  border-right: 0;
+  padding-left: 1rem;
+}
+
+.campo-puntos {
+  text-align: center;
+}
+
+
 .footer {
   background-color: var(--color-secundario); /* Color de fondo del footer */
   padding: 20px;
