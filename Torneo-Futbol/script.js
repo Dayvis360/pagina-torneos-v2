@@ -8,7 +8,7 @@ let miAPI; // Si es const da error no me acuerdo porque :c
 const obtenerDatosAPI = async () => {
   // Intenta obtener el json de la API y almacenarlo en la vafiable "miAPI"
   try {
-    const response = await fetch('BDSimulacion.json')
+    const response = await fetch('BDsimulacion.json')
     if(!response.ok){
       throw new Error('Error al obtener la api');
     }
