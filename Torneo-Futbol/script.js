@@ -1,26 +1,26 @@
 const darkModeButton = document.querySelector(".dark-mode-button"); // la lunita basicamente
 const body = document.querySelector(".body");
 
-const tablaPuntos = document.querySelector('.tabla-puntos')
+const tablaPuntos = document.querySelector('.tabla-puntos');
 let miAPI; // Si es const da error no me acuerdo porque :c
 
 // Funcion asíncrona para obtener el objeto principal de la api
-const obtenerDatosAPI = async () => {
+const obtenerDatosBD = async () => {
   // Intenta obtener el json de la API y almacenarlo en la vafiable "miAPI"
   try {
-    const response = await fetch('BDsimulacion.json')
+    const response = await fetch('BDsimulacion.json');
     if(!response.ok){
       throw new Error('Error al obtener la api');
     }
-    miAPI = await response.json()
+    miAPI = await response.json();
   } catch (err) { // Si hay un error en el proceso muestra el error sin detener el programa
-    console.log(err)
+    console.log(err);
   }
 }
 
 // Función principal 
 const generarTablaDePuntosDinamicamente = async () => {
-  await obtenerDatosAPI() // Espera a que se obtenga los datos del json para ejecutar el codigo
+  await obtenerDatosAPI(); // Espera a que se obtenga los datos del json para ejecutar el codigo
   
   // Ordenar los equipos por puntos, del mas alto al mas bajo
   const equiposOrdenados = miAPI.equipos.sort((a, b) => b.puntos - a.puntos);
