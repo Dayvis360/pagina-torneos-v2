@@ -20,7 +20,7 @@ const obtenerDatosBD = async () => {
 
 // Función principal 
 const generarTablaDePuntosDinamicamente = async () => {
-  await obtenerDatosAPI(); // Espera a que se obtenga los datos del json para ejecutar el codigo
+  await obtenerDatosBD(); // Espera a que se obtenga los datos del json para ejecutar el codigo
   
   // Ordenar los equipos por puntos, del mas alto al mas bajo
   const equiposOrdenados = miAPI.equipos.sort((a, b) => b.puntos - a.puntos);
