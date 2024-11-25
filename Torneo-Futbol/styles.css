@@ -168,7 +168,7 @@
 /* Tabla de puntos */
 .tabla-item {
   display: grid;
-  grid-template-columns: 9fr 1fr;
+  grid-template-columns: 7fr 3fr;
   background: var(--color-cuaternario);
 }
 
