@@ -1,0 +1,85 @@
+{
+  "equipos": [
+    {
+      "id": 1,
+      "nombre": "La vagancia",
+      "puntos": 10,
+      
+      
+      
+      "jugadores": [
+        { "id": 1, "nombre": "Lionel Messi" },
+        { "id": 2, "nombre": "Sergio Agüero" },
+        { "id": 3, "nombre": "Ángel Di María" }
+      ],
+      "partidos": [
+        {
+          "oponente": "Venezuela",
+          "resultado": "3-1",
+          "goleadores": ["Lionel Messi", "Sergio Agüero"]
+        },
+        {
+          "oponente": "Chile",
+          "resultado": "2-2",
+          "goleadores": ["Ángel Di María", "Lionel Messi"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Venezuela",
+      "puntos": 5,
+      "jugadores": [
+        { "id": 1, "nombre": "Salomón Rondón" },
+        { "id": 2, "nombre": "Tomás Rincón" },
+        { "id": 3, "nombre": "Yeferson Soteldo" }
+      ],
+      "partidos": [
+        {
+          "oponente": "Argentina",
+          "resultado": "1-3",
+          "goleadores": ["Salomón Rondón"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Colombia",
+      "puntos": 8,
+      "jugadores": [
+        { "id": 1, "nombre": "James Rodríguez" },
+        { "id": 2, "nombre": "Radamel Falcao" },
+        { "id": 3, "nombre": "Duván Zapata" }
+      ],
+      "partidos": [
+        {
+          "oponente": "Chile",
+          "resultado": "1-0",
+          "goleadores": ["James Rodríguez"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Chile",
+      "puntos": 12,
+      "jugadores": [
+        { "id": 1, "nombre": "Alexis Sánchez" },
+        { "id": 2, "nombre": "Arturo Vidal" },
+        { "id": 3, "nombre": "Claudio Bravo" }
+      ],
+      "partidos": [
+        {
+          "oponente": "Colombia",
+          "resultado": "0-1",
+          "goleadores": []
+        },
+        {
+          "oponente": "Argentina",
+          "resultado": "2-2",
+          "goleadores": ["Alexis Sánchez", "Arturo Vidal"]
+        }
+      ]
+    }
+  ]
+}
