@@ -2,7 +2,7 @@ const darkModeButton = document.querySelector(".dark-mode-button"); // la lunita
 const body = document.querySelector(".body");
 
 const tablaPuntos = document.querySelector('.tabla-puntos');
-let miAPI; // Si es const da error no me acuerdo porque :c
+let miBD; // Si es const da error no me acuerdo porque :c
 
 // Funcion asíncrona para obtener el objeto principal de la api
 const obtenerDatosBD = async () => {
@@ -12,7 +12,7 @@ const obtenerDatosBD = async () => {
     if(!response.ok){
       throw new Error('Error al obtener la api');
     }
-    miAPI = await response.json();
+    miBD = await response.json();
   } catch (err) { // Si hay un error en el proceso muestra el error sin detener el programa
     console.log(err);
   }
@@ -23,7 +23,7 @@ const generarTablaDePuntosDinamicamente = async () => {
   await obtenerDatosBD(); // Espera a que se obtenga los datos del json para ejecutar el codigo
   
   // Ordenar los equipos por puntos, del mas alto al mas bajo
-  const equiposOrdenados = miAPI.equipos.sort((a, b) => b.puntos - a.puntos);
+  const equiposOrdenados = miBD(a, b) => b.puntos - a.puntos);
   
   const fragmento = document.createDocumentFragment(); // Crea un fragmento para cargar los datos a la pagina de una sola vez y no hacerlo uno por uno
   
