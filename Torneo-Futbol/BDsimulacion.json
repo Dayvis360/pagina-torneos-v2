@@ -80,6 +80,28 @@
           "goleadores": ["Alexis Sánchez", "Arturo Vidal"]
         }
       ]
+    },
+    {
+      "id": 5,
+      "nombre": "otro equipo",
+      "puntos": 2,
+      "jugadores": [
+        { "id": 1, "nombre": "Alexis Sánchez" },
+        { "id": 2, "nombre": "Arturo Vidal" },
+        { "id": 3, "nombre": "Claudio Bravo" }
+      ],
+      "partidos": [
+        {
+          "oponente": "Colombia",
+          "resultado": "0-1",
+          "goleadores": []
+        },
+        {
+          "oponente": "Argentina",
+          "resultado": "2-2",
+          "goleadores": ["Alexis Sánchez", "Arturo Vidal"]
+        }
+      ]
     }
   ]
 }
