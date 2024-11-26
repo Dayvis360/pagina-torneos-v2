@@ -23,7 +23,7 @@ const generarTablaDePuntosDinamicamente = async () => {
   await obtenerDatosBD(); // Espera a que se obtenga los datos del json para ejecutar el codigo
   
   // Ordenar los equipos por puntos, del mas alto al mas bajo
-  const equiposOrdenados = miBD.equipos.sort((a, b) => b.puntos - a.puntos));
+  const equiposOrdenados = miBD.equipos.sort((a, b) => b.puntos - a.puntos);
   
   const fragmento = document.createDocumentFragment(); // Crea un fragmento para cargar los datos a la pagina de una sola vez y no hacerlo uno por uno
   
