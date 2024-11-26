@@ -27,7 +27,7 @@
     },
     {
       "id": 2,
-      "nombre": "Venezuela",
+      "nombre": "Barrilete",
       "puntos": 5,
       "jugadores": [
         { "id": 1, "nombre": "Salomón Rondón" },
@@ -44,7 +44,7 @@
     },
     {
       "id": 3,
-      "nombre": "Colombia",
+      "nombre": "Los pibes",
       "puntos": 8,
       "jugadores": [
         { "id": 1, "nombre": "James Rodríguez" },
@@ -61,8 +61,8 @@
     },
     {
       "id": 4,
-      "nombre": "Chile",
-      "puntos": 12,
+      "nombre": "otro equipo",
+      "puntos": 3,
       "jugadores": [
         { "id": 1, "nombre": "Alexis Sánchez" },
         { "id": 2, "nombre": "Arturo Vidal" },
