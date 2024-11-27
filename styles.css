@@ -41,7 +41,8 @@ body, .box, .footer {
   
   /* Navegación */
   .nav-bar {
-     position: fixed; /* Barra fija en la parte superior */
+    color: #ffffff;
+    position: fixed; /* Barra fija en la parte superior */
     top: 0;
     left: 0;
     width: 100%;
