@@ -41,12 +41,11 @@ body, .box, .footer {
   
   /* Navegación */
   .nav-bar {
-    color: #ffffff;
     position: fixed; /* Barra fija en la parte superior */
     top: 0;
     left: 0;
     width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,6 +59,7 @@ body, .box, .footer {
   }
   
   .nav-links a {
+      color: #ffffff;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
